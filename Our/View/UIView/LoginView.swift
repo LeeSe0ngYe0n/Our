@@ -4,9 +4,9 @@ final class LoginView: UIView {
     
     lazy var loginLabel: UILabel = {
         let lb: UILabel = UILabel()
-        lb.text = "Login"
+        lb.text = "Our"
         lb.textColor = .black
-        lb.font = .preferredFont(forTextStyle: .title1)
+        lb.font = .preferredFont(forTextStyle: .largeTitle)
         lb.textAlignment = .center
         self.addSubview(lb)
         return lb
@@ -38,6 +38,7 @@ final class LoginView: UIView {
         let bt: UIButton = UIButton()
         bt.setTitle("Forgot Password", for: .normal)
         bt.setTitleColor(.black, for: .normal)
+        bt.titleLabel?.font = .preferredFont(forTextStyle: .subheadline)
         self.addSubview(bt)
         return bt
     }()
@@ -46,6 +47,7 @@ final class LoginView: UIView {
         let bt: UIButton = UIButton()
         bt.setTitle("New Customer", for: .normal)
         bt.setTitleColor(.black, for: .normal)
+        bt.titleLabel?.font = .preferredFont(forTextStyle: .subheadline)
         self.addSubview(bt)
         return bt
     }()
@@ -54,7 +56,7 @@ final class LoginView: UIView {
         let lb: UILabel = UILabel()
         lb.text = "! Please check your email and password."
         lb.textColor = .white
-        lb.font = .systemFont(ofSize: 16)
+        lb.font = .preferredFont(forTextStyle: .footnote)
         lb.textAlignment = .center
         self.addSubview(lb)
         return lb
@@ -119,15 +121,15 @@ final class LoginView: UIView {
             textFieldStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
             textFieldStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
             
-            forgotPasswordAndNewCustomerStackView.topAnchor.constraint(equalTo: textFieldStackView.bottomAnchor, constant: 30),
-            forgotPasswordAndNewCustomerStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
-            forgotPasswordAndNewCustomerStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
+            forgotPasswordAndNewCustomerStackView.topAnchor.constraint(equalTo: textFieldStackView.bottomAnchor, constant: 20),
+            forgotPasswordAndNewCustomerStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 55),
+            forgotPasswordAndNewCustomerStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -55),
             
-            checkEmailAndPasswordLabel.topAnchor.constraint(equalTo: forgotPasswordAndNewCustomerStackView.bottomAnchor, constant: 7),
+            checkEmailAndPasswordLabel.topAnchor.constraint(equalTo: forgotPasswordAndNewCustomerStackView.bottomAnchor, constant: 4),
             checkEmailAndPasswordLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             checkEmailAndPasswordLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
-            loginButton.topAnchor.constraint(equalTo: checkEmailAndPasswordLabel.bottomAnchor, constant: 15),
+            loginButton.topAnchor.constraint(equalTo: checkEmailAndPasswordLabel.bottomAnchor, constant: 10),
             loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
             loginButton.heightAnchor.constraint(equalToConstant: 60)
