@@ -13,6 +13,7 @@
 		9B616B1E2B9C488B00FE6F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B616B1D2B9C488B00FE6F60 /* Assets.xcassets */; };
 		9B616B212B9C488B00FE6F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B616B1F2B9C488B00FE6F60 /* LaunchScreen.storyboard */; };
 		9B616B332B9C4FBE00FE6F60 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B616B322B9C4FBE00FE6F60 /* LoginView.swift */; };
+		9B616B352B9C511000FE6F60 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B616B342B9C511000FE6F60 /* ForgotPasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9B616B202B9C488B00FE6F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B616B222B9C488B00FE6F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B616B322B9C4FBE00FE6F60 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9B616B342B9C511000FE6F60 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				9B616B322B9C4FBE00FE6F60 /* LoginView.swift */,
+				9B616B342B9C511000FE6F60 /* ForgotPasswordView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				9B616B192B9C488A00FE6F60 /* LoginViewController.swift in Sources */,
 				9B616B152B9C488A00FE6F60 /* AppDelegate.swift in Sources */,
 				9B616B332B9C4FBE00FE6F60 /* LoginView.swift in Sources */,
+				9B616B352B9C511000FE6F60 /* ForgotPasswordView.swift in Sources */,
 				9B616B172B9C488A00FE6F60 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
