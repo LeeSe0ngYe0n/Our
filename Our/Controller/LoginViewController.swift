@@ -2,7 +2,10 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    let login: LoginView = LoginView()
+    private var loginView: LoginView {
+        guard let loginView = view as? LoginView else { return LoginView() }
+        return loginView
+    }
     
     override func loadView() {
         view = LoginView()
@@ -14,7 +17,6 @@ final class LoginViewController: UIViewController {
     }
     
     private func setButtonAddTarget() {
-        guard let loginView = view as? LoginView else { return }
         loginView.forgotPasswordButton.addTarget(self, action: #selector(tappedForgotPasswordButton), for: .touchUpInside)
         loginView.loginButton.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
     }
@@ -25,9 +27,13 @@ final class LoginViewController: UIViewController {
     }
     
     @objc private func tappedLoginButton() {
-        guard let loginView = view as? LoginView else { return }
-        if loginView.emailTextField.text != "lsyeon98@naver.com" && login.passwordTextField.text != "123" {
+        guard checkEmailAndPassword() else {
             loginView.checkEmailAndPasswordLabel.textColor = .systemRed
+            return
         }
+    }
+    
+    private func checkEmailAndPassword() -> Bool {
+        return loginView.emailTextField.text == "lsyeon98@naver.com" && loginView.passwordTextField.text == "123"
     }
 }
