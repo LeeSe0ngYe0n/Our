@@ -56,7 +56,7 @@
 			children = (
 				9B616B282B9C490700FE6F60 /* App */,
 				9B616B292B9C491500FE6F60 /* Model */,
-				9B616B2A2B9C492100FE6F60 /* View */,
+				9B616B302B9C4F1000FE6F60 /* View */,
 				9B616B2B2B9C492A00FE6F60 /* Controller */,
 				9B616B1D2B9C488B00FE6F60 /* Assets.xcassets */,
 				9B616B1F2B9C488B00FE6F60 /* LaunchScreen.storyboard */,
@@ -81,19 +81,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9B616B2A2B9C492100FE6F60 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		9B616B2B2B9C492A00FE6F60 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				9B616B182B9C488A00FE6F60 /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B616B302B9C4F1000FE6F60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
