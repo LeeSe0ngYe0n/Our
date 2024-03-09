@@ -20,7 +20,8 @@ final class LoginViewController: UIViewController {
     }
     
     @objc private func tappedForgotPasswordButton() {
-        //
+        let nextVC = ForgotViewController()
+        self.present(nextVC, animated: true)
     }
     
     @objc private func tappedLoginButton() {
