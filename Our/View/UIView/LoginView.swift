@@ -12,9 +12,8 @@ final class LoginView: UIView {
         return lb
     }()
     
-    // textfield 에러 -> https://jangsh9611.tistory.com/50
-    lazy var emailTextField: UITextField = {
-        let tf: UITextField = UITextField()
+    lazy var emailTextField: TextFieldUnderline = {
+        let tf = TextFieldUnderline(frame: CGRect(x: 50, y: 50, width: 300, height: 30))
         tf.placeholder = "email"
         tf.keyboardType = .emailAddress
         tf.autocorrectionType = .no
@@ -23,10 +22,10 @@ final class LoginView: UIView {
         return tf
     }()
     
-    lazy var passwordTextField: UITextField = {
-        let tf: UITextField = UITextField()
-        tf.placeholder = "password"
-        tf.keyboardType = .emailAddress
+    lazy var passwordTextField: TextFieldUnderline = {
+        let tf = TextFieldUnderline(frame: CGRect(x: 50, y: 50, width: 300, height: 30))
+        tf.placeholder = "Password"
+        tf.keyboardType = .default
         tf.autocorrectionType = .no
         tf.spellCheckingType = .no
         tf.isSecureTextEntry = true
@@ -54,8 +53,7 @@ final class LoginView: UIView {
     
     lazy var checkEmailAndPasswordLabel: UILabel = {
         let lb: UILabel = UILabel()
-        lb.text = "! Please check your email and password."
-        lb.textColor = .white
+        lb.textColor = .systemRed
         lb.font = .preferredFont(forTextStyle: .footnote)
         lb.textAlignment = .center
         self.addSubview(lb)
@@ -78,7 +76,7 @@ final class LoginView: UIView {
         sv.addArrangedSubview(emailTextField)
         sv.addArrangedSubview(passwordTextField)
         sv.axis = .vertical
-        sv.spacing = 20
+        sv.spacing = 24
         self.addSubview(sv)
         return sv
     }()
@@ -129,7 +127,7 @@ final class LoginView: UIView {
             checkEmailAndPasswordLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             checkEmailAndPasswordLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
-            loginButton.topAnchor.constraint(equalTo: checkEmailAndPasswordLabel.bottomAnchor, constant: 10),
+            loginButton.topAnchor.constraint(equalTo: checkEmailAndPasswordLabel.bottomAnchor, constant: 15),
             loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
             loginButton.heightAnchor.constraint(equalToConstant: 60)

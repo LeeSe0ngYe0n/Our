@@ -1,49 +1,80 @@
 import UIKit
 
-final class SignUpView: UIView {
+final class SignupView: UIView {
     
-    lazy var emailTextField: UITextField = {
-        let tf: UITextField = UITextField()
+    lazy var emailTextField: TextFieldUnderline = {
+        let tf = TextFieldUnderline(frame: CGRect(x: 50, y: 50, width: 300, height: 30))
+        tf.placeholder = "Email"
+        tf.keyboardType = .emailAddress
+        tf.autocorrectionType = .no
+        tf.spellCheckingType = .no
         return tf
     }()
     
-    lazy var passwordTextField: UITextField = {
-        let tf: UITextField = UITextField()
+    lazy var passwordTextField: TextFieldUnderline = {
+        let tf = TextFieldUnderline(frame: CGRect(x: 50, y: 50, width: 300, height: 30))
+        tf.placeholder = "Password"
+        tf.keyboardType = .emailAddress
+        tf.autocorrectionType = .no
+        tf.spellCheckingType = .no
         return tf
     }()
     
-    lazy var checkPasswordTextField: UITextField = {
-        let tf: UITextField = UITextField()
+    lazy var checkPasswordTextField: TextFieldUnderline = {
+        let tf = TextFieldUnderline(frame: CGRect(x: 50, y: 50, width: 300, height: 30))
+        tf.placeholder = "Password"
+        tf.keyboardType = .emailAddress
+        tf.autocorrectionType = .no
+        tf.spellCheckingType = .no
         return tf
     }()
     
-    lazy var phoneTextField: UITextField = {
-        let tf: UITextField = UITextField()
+    lazy var phoneTextField: TextFieldUnderline = {
+        let tf = TextFieldUnderline(frame: CGRect(x: 50, y: 50, width: 300, height: 30))
+        tf.placeholder = "Phone Number"
+        tf.keyboardType = .phonePad
+        tf.autocorrectionType = .no
+        tf.spellCheckingType = .no
         return tf
     }()
     
-    lazy var addressTextField: UITextField = {
-        let tf: UITextField = UITextField()
+    lazy var addressTextField: TextFieldUnderline = {
+        let tf = TextFieldUnderline(frame: CGRect(x: 50, y: 50, width: 300, height: 30))
+        tf.placeholder = "Address"
+        tf.autocorrectionType = .no
+        tf.spellCheckingType = .no
         return tf
     }()
-    
+
     lazy var signupButton: UIButton = {
         let bt: UIButton = UIButton()
+        bt.setTitle("Login", for: .normal)
+        bt.setTitleColor(.white, for: .normal)
+        bt.backgroundColor = .black
+        bt.layer.masksToBounds = true
+        bt.layer.cornerRadius = 30
+        self.addSubview(bt)
         return bt
     }()
     
     lazy var textFieldStackView: UIStackView = {
-        let sv: UIStackView = UIStackView()
-        sv.addArrangedSubview(emailTextField)
-        sv.addArrangedSubview(passwordTextField)
-        sv.addArrangedSubview(checkPasswordTextField)
-        sv.addArrangedSubview(phoneTextField)
-        sv.addArrangedSubview(addressTextField)
+        let sv: UIStackView = UIStackView(arrangedSubviews: [
+            emailTextField,
+            passwordTextField,
+            checkPasswordTextField,
+            phoneTextField,
+            addressTextField
+        ])
+        sv.axis = .vertical
+        sv.spacing = 28
+        
+        self.addSubview(sv)
         return sv
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
         setAutolayout()
     }
     
@@ -61,8 +92,9 @@ final class SignUpView: UIView {
             textFieldStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
             
             signupButton.topAnchor.constraint(equalTo: textFieldStackView.bottomAnchor, constant: 30),
-            signupButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
-            signupButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
+            signupButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
+            signupButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+            signupButton.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
 }
