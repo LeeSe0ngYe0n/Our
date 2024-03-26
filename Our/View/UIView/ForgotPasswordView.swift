@@ -21,8 +21,8 @@ class ForgotPasswordView: UIView {
         return lb
     }()
     
-    lazy var emailTextField: UITextField = {
-        let tf: UITextField = UITextField()
+    lazy var emailTextField: TextFieldUnderline = {
+        let tf = TextFieldUnderline(frame: CGRect(x: 50, y: 50, width: 300, height: 30))
         tf.placeholder = "email"
         tf.autocorrectionType = .no
         tf.spellCheckingType = .no
