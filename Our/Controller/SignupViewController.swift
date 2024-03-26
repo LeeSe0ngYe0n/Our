@@ -1,8 +1,12 @@
-//
-//  SignupViewController.swift
-//  Our
-//
-//  Created by LeeSeongYeon on 3/27/24.
-//
+import UIKit
 
-import Foundation
+final class SignupViewController: UIViewController {
+    
+    override func loadView() {
+        view = SignupView()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}

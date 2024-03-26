@@ -16,6 +16,8 @@
 		9B616B352B9C511000FE6F60 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B616B342B9C511000FE6F60 /* ForgotPasswordView.swift */; };
 		9B616B372B9C515A00FE6F60 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B616B362B9C515A00FE6F60 /* ForgotPasswordViewController.swift */; };
 		9B616B392B9C538600FE6F60 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B616B382B9C538600FE6F60 /* SignupView.swift */; };
+		9BA03AE62BB34B060012F868 /* TextFieldUnderline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA03AE52BB34B060012F868 /* TextFieldUnderline.swift */; };
+		9BA03AE82BB34BE10012F868 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA03AE72BB34BE10012F868 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9B616B342B9C511000FE6F60 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		9B616B362B9C515A00FE6F60 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		9B616B382B9C538600FE6F60 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		9BA03AE52BB34B060012F868 /* TextFieldUnderline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldUnderline.swift; sourceTree = "<group>"; };
+		9BA03AE72BB34BE10012F868 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B09BD962BB1958600B95B18 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9BA03AE52BB34B060012F868 /* TextFieldUnderline.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		9B616B082B9C488A00FE6F60 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +106,7 @@
 			children = (
 				9B616B182B9C488A00FE6F60 /* LoginViewController.swift */,
 				9B616B362B9C515A00FE6F60 /* ForgotPasswordViewController.swift */,
+				9BA03AE72BB34BE10012F868 /* SignupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,6 +114,7 @@
 		9B616B302B9C4F1000FE6F60 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9B09BD962BB1958600B95B18 /* Custom */,
 				9B616B312B9C4FB300FE6F60 /* UIView */,
 			);
 			path = View;
@@ -186,12 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA03AE82BB34BE10012F868 /* SignupViewController.swift in Sources */,
 				9B616B392B9C538600FE6F60 /* SignupView.swift in Sources */,
 				9B616B192B9C488A00FE6F60 /* LoginViewController.swift in Sources */,
 				9B616B152B9C488A00FE6F60 /* AppDelegate.swift in Sources */,
 				9B616B372B9C515A00FE6F60 /* ForgotPasswordViewController.swift in Sources */,
 				9B616B332B9C4FBE00FE6F60 /* LoginView.swift in Sources */,
 				9B616B352B9C511000FE6F60 /* ForgotPasswordView.swift in Sources */,
+				9BA03AE62BB34B060012F868 /* TextFieldUnderline.swift in Sources */,
 				9B616B172B9C488A00FE6F60 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
