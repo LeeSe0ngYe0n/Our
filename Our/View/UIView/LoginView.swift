@@ -76,7 +76,7 @@ final class LoginView: UIView {
         sv.addArrangedSubview(emailTextField)
         sv.addArrangedSubview(passwordTextField)
         sv.axis = .vertical
-        sv.spacing = 24
+        sv.spacing = 35
         self.addSubview(sv)
         return sv
     }()

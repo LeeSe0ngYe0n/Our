@@ -66,7 +66,7 @@ final class SignupView: UIView {
             addressTextField
         ])
         sv.axis = .vertical
-        sv.spacing = 28
+        sv.spacing = 35
         
         self.addSubview(sv)
         return sv
