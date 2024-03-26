@@ -13,6 +13,10 @@ final class LoginViewController: UIViewController {
         setButtonAddTarget()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     private func setButtonAddTarget() {
         loginView.forgotPasswordButton.addTarget(self, action: #selector(tappedForgotPasswordButton), for: .touchUpInside)
         loginView.newCustomerButton.addTarget(self, action: #selector(tappedSignupButton), for: .touchUpInside)
